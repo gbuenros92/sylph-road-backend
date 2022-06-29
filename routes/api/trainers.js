@@ -8,4 +8,7 @@ router.post('/signup', trainersCtrl.create)
 // POST /api/v1/login
 router.post('/login', trainersCtrl.login)
 
+// GET /api/v1/trainers/:id (Trainer profile)
+router.get('/:id', trainersCtrl.show)
+
 module.exports = router

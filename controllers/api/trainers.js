@@ -34,6 +34,16 @@ const login = async (req, res) => {
     }
 }
 
+// Find a trainer
+const show = async (req, res) => {
+    try {
+        const foundTrainer = await Trainer.findById(req.params.id)
+        res.status(200).json(foundTrainer)
+    } catch (e) {
+        res.status(400).json({ msg: e.message })
+    }
+}
+
 
 const createJWT = trainer => {
     return jwt.sign(
@@ -44,5 +54,6 @@ const createJWT = trainer => {
 }
 module.exports = {
     create,
-    login
+    login,
+    show
 }
