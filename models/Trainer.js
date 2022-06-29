@@ -21,7 +21,7 @@ const trainerSchema = new Schema ({
     trainerName: String,
     trainerHandle: {
         type: String,
-        default: `@trainer${Date.now()}`,
+        default: `trainer${Date.now()}`,
         trim: true,
         unique: true,
         required: true

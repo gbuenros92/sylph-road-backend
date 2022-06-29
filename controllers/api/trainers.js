@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const saltRounds = 10
 const jwt = require('jsonwebtoken')
 
-// Create Trainer Profile
+// Create Trainer account
 const create = async (req, res) => {
     try {
         const createdTrainer = await Trainer.create(req.body)
@@ -58,6 +58,15 @@ const update = async (req, res) => {
     }
 }
 
+// Delete trainer account
+const remove = async (req, res) => {
+    try {
+        const deletedTrainer = await Trainer.findByIdAndDelete(req.params.id)
+        res.status(200).json(deletedTrainer)
+    } catch (e) {
+        res.status(400).json({ msg: e.message })
+    }
+}
 
 const createJWT = trainer => {
     return jwt.sign(
@@ -71,5 +80,6 @@ module.exports = {
     create,
     login,
     show,
-    update
+    update,
+    remove
 }

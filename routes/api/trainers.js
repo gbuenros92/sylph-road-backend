@@ -14,4 +14,7 @@ router.get('/:id', trainersCtrl.show)
 // PUT /api/v1/trainers/:id (Update profile)
 router.put('/:id', trainersCtrl.update)
 
+// DELETE  /api/v1/trainers/:id (Delete account)
+router.delete('/:id', trainersCtrl.remove)
+
 module.exports = router
