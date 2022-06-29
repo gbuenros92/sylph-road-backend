@@ -11,4 +11,7 @@ router.post('/login', trainersCtrl.login)
 // GET /api/v1/trainers/:id (Trainer profile)
 router.get('/:id', trainersCtrl.show)
 
+// PUT /api/v1/trainers/:id (Update profile)
+router.put('/:id', trainersCtrl.update)
+
 module.exports = router

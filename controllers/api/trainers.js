@@ -1,5 +1,6 @@
 const Trainer = require('../../models/Trainer')
 const bcrypt = require('bcrypt')
+const saltRounds = 10
 const jwt = require('jsonwebtoken')
 
 // Create Trainer Profile
@@ -44,6 +45,19 @@ const show = async (req, res) => {
     }
 }
 
+// Update trainer
+const update = async (req, res) => {
+    try {
+
+        req.body.password = await bcrypt.hash(req.body.password, saltRounds)
+        const updatedTrainer = await Trainer.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        res.status(200).json(updatedTrainer)
+        
+    } catch (e) {
+        res.status(400).json({ msg: e.messge })
+    }
+}
+
 
 const createJWT = trainer => {
     return jwt.sign(
@@ -52,8 +66,10 @@ const createJWT = trainer => {
         { expiresIn: '48h' }
     )
 }
+
 module.exports = {
     create,
     login,
-    show
+    show,
+    update
 }
