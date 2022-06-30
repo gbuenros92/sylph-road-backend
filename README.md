@@ -6,9 +6,11 @@ Fictional social media website set in the world of Pokemon, where users take on 
 ***
 
 ## Development Process
-DATE | PROGRESS | BLOCKERS | GOALS |
------ | ----- | ----- | ----- |
-6/28/2022 | Created folder structure and database for project. Created Trainer schema model & create route and controller. | None | Create rest of CRUD for Trainers and Pokemon |
+| DATE | PROGRESS | BLOCKERS | GOALS |
+| :---: | ------- | -------- | ----- |
+| 6/28/2022 | Created folder structure and database for project. Created Trainer schema model & create route and controller. | None | Create rest of CRUD for Trainers and Pokemon |
+| 6/29/2022 | Finished rest of Trainer CRUD, plus login controller and route | None | Pokemon CRUD |
+| 6/30/2022 | CRUD functionality for Pokemon | Deciding how to incorporate CRUD features for Trainer party pokemon with third party Pokemon API | Authentication
 
 
 ## Technologies
