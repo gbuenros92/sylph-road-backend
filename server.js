@@ -13,6 +13,9 @@ app.use(cors())
 // Trainers
 app.use('/api/v1/trainers', require('./routes/api/trainers'))
 
+// Pokemon
+app.use('/api/v1/pokemon', require('./routes/api/pokemon'))
+
 // ===== PORT =====
 const PORT = 8080
 app.listen(PORT, () => console.log(`Express is running on port ${PORT}`))
