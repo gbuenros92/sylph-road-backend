@@ -12,15 +12,16 @@ Fictional social media website set in the world of Pokemon, where users take on 
 | 6/29/2022 | Finished rest of Trainer CRUD, plus login controller and route | None | Pokemon CRUD |
 | 6/30/2022 | CRUD functionality for Pokemon | Deciding how to incorporate CRUD features for Trainer party pokemon with third party Pokemon API | Authentication
 
+***
 
 ## Technologies
-***
 1. Express.js
 2. Mongoose
 3. Bcrypt
 
-## Stretch Goals
 ***
+
+## Stretch Goals
 - Add/Remove friend feature
 - Pokedex
 - Recent posts feed

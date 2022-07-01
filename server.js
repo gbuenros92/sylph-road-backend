@@ -8,6 +8,7 @@ require('./config/database')
 // ===== MIDDLEWARES =====
 app.use(express.json())
 app.use(cors())
+app.use(require('./config/checkToken'))
 
 // ===== ROUTES =====
 // Trainers
