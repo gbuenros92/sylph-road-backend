@@ -15,7 +15,8 @@ app.use(require('./config/checkToken'))
 app.use('/api/v1/trainers', require('./routes/api/trainers'))
 
 // Pokemon
-app.use('/api/v1/pokemon', require('./routes/api/pokemon'))
+const ensureLoggedIn = require('./config/ensureLoggedIn')
+app.use('/api/v1/pokemon', ensureLoggedIn, require('./routes/api/pokemon'))
 
 // ===== PORT =====
 const PORT = 8080
