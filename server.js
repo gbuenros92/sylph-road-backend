@@ -19,5 +19,5 @@ const ensureLoggedIn = require('./config/ensureLoggedIn')
 app.use('/api/v1/pokemon', ensureLoggedIn, require('./routes/api/pokemon'))
 
 // ===== PORT =====
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 app.listen(PORT, () => console.log(`Express is running on port ${PORT}`))
