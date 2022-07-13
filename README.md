@@ -15,6 +15,26 @@ Fictional social media website set in the world of Pokemon, where users take on 
 
 ***
 
+## API Routes
+#### Trainers
+| METHOD | ROUTE | DESCRIPTION |
+| :---: | --- | --- |
+| POST | /api/v1/trainers/signup | Create a new account |
+| POST | /api/v1/trainers/login | Log in to user account |
+| GET | /api/v1/trainers/:id | Show user profile |
+| PUT | /api/v1/trainers/:id | Update user profile |
+| DEL | /api/v1/trainers/:id | Delete user account |
+
+#### Pokemon
+| METHOD | ROUTE | DESCRIPTION |
+| :---: | --- | --- |
+| POST | /api/v1/pokemon | Add pokemon to user's party |
+| GET | /api/v1/pokemon/:id | Show specific pokemon in user's party |
+| PUT | /api/v1/pokemon/:id | Edit information for specific party pokemon |
+| DEL | /api/v1/pokemon/:id | Remove pokemon from party |
+
+***
+
 ## Technologies
 1. Express.js
 2. Mongoose
